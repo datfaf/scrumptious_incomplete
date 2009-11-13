@@ -10,7 +10,7 @@ function(head, req) {
   // The first matching format is sent, so reordering functions changes 
   // thier priority. In this case HTML is the preferred format, so it comes first.
   provides("html", function() {
-    // redner the html head using a template
+    // render the html head using a template
     send(template(templates.index.head, {
       title: "foo",
       index: indexPath,
@@ -26,7 +26,7 @@ function(head, req) {
       send(template(templates.index.row, {
         name: bookmark.name,
         url: bookmark.url,
-        date: bookmark.created_at
+        date: bookmark.created_at,
         tags: bookmark.tags
       }));
     }
@@ -36,4 +36,4 @@ function(head, req) {
       assets: assetPath()
     });
   });
-}
+};
