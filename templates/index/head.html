@@ -5,11 +5,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title><%= title %></title>
-	<link rel="stylesheet" href="<%= assets %>/screen.css" type="text/css">
+	<link rel="stylesheet" href="<%= assets %>/style/main.css" type="text/css">
 </head>
 <body>
   <div id="header">
-    <a id="new" href="<%= show %>/new">Create new bookmark</a>
+    <a id="new" href="<%= show %>/new">&#43; Create new bookmark</a>
+    <h2><a href="<%= index %>"><%= title %></a></h2>
+    <h3><%= description %></h3>
   </div>
   <div id="content">
     <h1>Recent Bookmarks</h1>
