@@ -1,5 +1,5 @@
 function(head, req) {
-  // !json templates
+  // !json templates.index
   // !code vendor/couchapp/path.js
   // !code vendor/couchapp/date.js
   // !code vendor/couchapp/template.js
@@ -11,7 +11,7 @@ function(head, req) {
   // thier priority. In this case HTML is the preferred format, so it comes first.
   provides("html", function() {
     // redner the html head using a template
-    send(template(templates.layout.head, {
+    send(template(templates.index.head, {
       title: "foo",
       index: indexPath,
       assets: assetPath(),
@@ -25,7 +25,7 @@ function(head, req) {
     }
     
     // render the html tail template
-    return template(templates.layout.tail, {
+    return template(templates.index.tail, {
       assets: assetPath()
     });
   });
