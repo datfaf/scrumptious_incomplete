@@ -1,4 +1,5 @@
 {
     "name": "Scrumptious",
-    "description": "A CouchApp Delicious clone"
+    "description": "A CouchApp Delicious clone",
+    "index": "_list/index/recent-bookmarks?descending=true&limit=5"
 }
