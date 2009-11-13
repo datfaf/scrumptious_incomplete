@@ -1,5 +1,6 @@
 function(head, req) {
   // !json templates.index
+  // !json couchapp
   // !code vendor/couchapp/path.js
   // !code vendor/couchapp/date.js
   // !code vendor/couchapp/template.js
@@ -12,7 +13,8 @@ function(head, req) {
   provides("html", function() {
     // render the html head using a template
     send(template(templates.index.head, {
-      title: "foo",
+      title: couchapp.name,
+      description: couchapp.description,
       index: indexPath,
       assets: assetPath(),
       show: showPath()
