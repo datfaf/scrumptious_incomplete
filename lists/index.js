@@ -21,7 +21,14 @@ function(head, req) {
     // loop over view rows, rendering one at a time
     var row, key;
     while (row = getRow()) {
-      // see sofa's lists/index.js
+      var bookmark = row.value;
+      key = row.key;
+      send(template(templates.index.row, {
+        name: bookmark.name,
+        url: bookmark.url,
+        date: bookmark.created_at
+        tags: bookmark.tags
+      }));
     }
     
     // render the html tail template
